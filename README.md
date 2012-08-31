@@ -1,7 +1,7 @@
 stash
 =====
 
-[Python Logging Handler][pyhton-logging] that emits [logstash][]/[kibana][] compatible records to [elasticsearch].
+[Python Logging Handler][python-logging] that emits [logstash][]/[kibana][] compatible records to [elasticsearch].
 
 
 
