@@ -42,17 +42,18 @@ A logstash/kibana compatible record format looks like:
 
 ## Usage
 
-    import logging
-    import stash
-    sh = stash.StashHandler('127.0.0.1:9200')
-    logger = logging.getLogger()
-    logger.addHandler(sh)
-    logger.warning('Test Message')
-
+```python
+import logging
+import stash
+sh = stash.StashHandler('127.0.0.1:9200')
+logger = logging.getLogger()
+logger.addHandler(sh)
+logger.warning('Test Message')
+```
 
 
 This logging hander should only be used in development when you don't want to set up and configure a
-logstash server. In production mode you should consider the python gelf handler [grapy][].
+logstash server. In production mode you should consider the python gelf handler [graypy][].
 
 [graypy]: http://pypi.python.org/pypi/graypy
 
