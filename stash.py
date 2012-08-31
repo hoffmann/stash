@@ -1,18 +1,16 @@
 import logging
-import pyes
-
 from pyes import ES
 import datetime
+
 class StashHandler(logging.Handler):
     def __init__(self, constr, whitelist=None, blacklist=None):
+        logging.Handler.__init__(self)
         self.conn = ES(constr)
-        self.whitelist = whitelist
         if blacklist is None:
             blacklist = set()
+        self.whitelist = whitelist
         self.blacklist = blacklist
-        logging.Handler.__init__(self)
         self.record_type = 'record'
-
 
     @property
     def index_name(self):
