@@ -15,30 +15,32 @@ stash
 The logstash convention is to use a new index named 'logstash-YYYY-MM-DD' for every day.
 A logstash/kibana compatible record format looks like:
 
-    {
-        "@fields": {
-            "_function": "<module>", 
-            "_pid": 10175, 
-            "_process_name": "MainProcess", 
-            "_thread_name": "MainThread", 
-            "facility": "test_logger", 
-            "file": "<ipython-input-8-25a8c050cea1>", 
-            "full_message": "", 
-            "host": "mir", 
-            "level": 7, 
-            "line": 1, 
-            "short_message": "Hello Graylog2.", 
-            "timestamp": 1346365351.338272, 
-            "version": "1.0"
-        }, 
-        "@message": "", 
-        "@source": "gelf://mir/<ipython-input-8-25a8c050cea1>", 
-        "@source_host": "gelf://mir/<ipython-input-8-25a8c050cea1>", 
-        "@source_path": "/", 
-        "@tags": [], 
-        "@timestamp": "2012-08-30T22:22:31.339000Z", 
-        "@type": "gelf-test"
-    }
+```json
+{
+    "@fields": {
+        "_function": "<module>", 
+        "_pid": 10175, 
+        "_process_name": "MainProcess", 
+        "_thread_name": "MainThread", 
+        "facility": "test_logger", 
+        "file": "<ipython-input-8-25a8c050cea1>", 
+        "full_message": "", 
+        "host": "mir", 
+        "level": 7, 
+        "line": 1, 
+        "short_message": "Hello Graylog2.", 
+        "timestamp": 1346365351.338272, 
+        "version": "1.0"
+    }, 
+    "@message": "", 
+    "@source": "gelf://mir/<ipython-input-8-25a8c050cea1>", 
+    "@source_host": "gelf://mir/<ipython-input-8-25a8c050cea1>", 
+    "@source_path": "/", 
+    "@tags": [], 
+    "@timestamp": "2012-08-30T22:22:31.339000Z", 
+    "@type": "gelf-test"
+}
+```
 
 ## Usage
 
